@@ -230,10 +230,16 @@ const NV: usize = 29;
 type E = GoldilocksExt2;
 
 #[test]
-fn test_nikko() {
-    let (_, ceno, devirgo) = { prepare_input::<E>(NV) };
-    run_ceno_prover("ceno", ceno);
+fn test_nikko_devirgo() {
+    let (_, _ceno, devirgo) = { prepare_input::<E>(NV) };
     run_devirgo("devirgo", devirgo);
+}
+
+#[test]
+fn test_nikko_ceno() {
+    let (_, ceno, _devirgo) = { prepare_input::<E>(NV) };
+    println!("INPUTS prepared");
+    run_ceno_prover("ceno", ceno);
 }
 
 pub fn run_devirgo<'a, E: ExtensionField>(name: &str, ps: Vec<VirtualPolynomial<'a, E>>) {
