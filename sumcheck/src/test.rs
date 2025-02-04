@@ -226,12 +226,13 @@ fn test_interpolation() {
 }
 
 const NUM_DEGREE: usize = 3;
-const NV: usize = 29;
+const NV: usize = 28;
 type E = GoldilocksExt2;
 
 #[test]
 fn test_nikko_devirgo() {
     let (_, _ceno, devirgo) = { prepare_input::<E>(NV) };
+    println!("INPUTS prepared");
     run_devirgo("devirgo", devirgo);
 }
 

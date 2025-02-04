@@ -42,7 +42,6 @@ pub type ArcMultilinearExtension<'a, E> =
 ///         (c1, \[3, 4\])
 ///     \]
 /// - raw_pointers_lookup_table maps fi to i
-///
 #[derive(Default, Clone)]
 pub struct VirtualPolynomial<'a, E: ExtensionField> {
     /// Aux information about the multilinear polynomial
